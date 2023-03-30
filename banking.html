@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function showDateTime() {
+        var currentDate = new Date();
+        var day = currentDate.getDay();
+        var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var date = currentDate.getDate();
+        var month = currentDate.getMonth() + 1; // JavaScript counts months from 0 to 11
+        var year = currentDate.getFullYear();
+        var hours = currentDate.getHours();
+        var minutes = currentDate.getMinutes();
+        var seconds = currentDate.getSeconds();
+
+        var dateTimeString = daysOfWeek[day] + ', ' + date + '/' + month + '/' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+        document.getElementById('datetime').innerHTML = dateTimeString;
+      }
+
+      // Call the showDateTime() function to display the date and time on page load
+      window.onload = showDateTime;
+    </script> 
+    <style>
+     
+    </style> 
+</head>
+<body>
+    <div>
+        <!-- Navigation bar HTML code -->
+        <!-- <nav>
+            
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#banking">Banking</a></li>
+              
+              <li><a href="#contactpage">Contact page</a></li>
+            </ul>
+          </nav> -->
+        
+        <form text-align="center">
+      
+        <p id="datetime"></p>
+
+
+        <label for="fname">Name:</label>
+        <input type="text" id="fname" value="name"><br><br>
+
+        <label for="fname">Branch:</label>
+        <input type="text" id="fname" value="branch"><br><br>
+
+        <label for="fname">Amount:</label>
+        <input type="text" id="fname" value="amount"><br><br>
+
+        <label for="fname">Aadhar card:</label>
+        <input type="text" id="fname" value="aadhar"><br><br>
+
+        <label for="fname">Pan card:</label>
+        <input type="text" id="fname" value="pan"><br><br>
+
+        <label for="fname">Time:</label>
+        <input type="text" id="fname" value="time"><br><br>
+
+          
+        </form>      
+  
+   
+  
+</body>
+</html>
